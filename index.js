@@ -54,6 +54,7 @@ var intents = new builder.IntentDialog({ recognizers: [recognizer] })
     .matches('BusTiming.NextBus', (session, args) => {
         varbusNum = builder.EntityRecognizer.findEntity(args.entities, 'BusServiceNum');
         varbusStopNum = builder.EntityRecognizer.findEntity(args.entities, 'BusStopNum');
+
         if (busNum) {
             busNum = busNum.entity;
         } else {
@@ -63,6 +64,7 @@ var intents = new builder.IntentDialog({ recognizers: [recognizer] })
             busStopNum = busStopNum.entity;
         } else {
             busStopNum = "75239";//Default fallback bus stop number}
+        }
             request({
                 headers: { 'AccountKey': ltaApiKey },
                 uri: busUrl + "BusStopID=" + busStopNum + "&ServiceNo=" + busNum
