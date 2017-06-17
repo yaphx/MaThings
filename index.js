@@ -5,12 +5,12 @@ For a complete walkthrough of creating this type of bot see the article at
 https://aka.ms/abs-node-luis
 -----------------------------------------------------------------------------*/
 "use strict";
-varpath = require('path');
-varrequest = require("request");
-constLuisModelUrl = 'https://' + luisAPIHostName + '/luis/v1/application?id=12669a72-3764-4478-86dc-b3168f79deaf'
-arbusUrl = "http://datamall2.mytransport.sg/ltaodataservice/BusArrival?";
-varltaApiKey = "YOUR_LTA_KEY_HERE";
-vargeneralReplies = [
+var path = require('path');
+var request = require("request");
+constLuisModelUrl = 'https://' + luisAPIHostName + '/luis/v1/application?id=12669a72-3764-4478-86dc-b3168f79deaf';
+var busUrl = "http://datamall2.mytransport.sg/ltaodataservice/BusArrival?";
+var ltaApiKey = "myXxi8YCTaGZEWA74qGhag==";
+var generalReplies = [
     "Hello to you too!\nHowmay I help you today?",
     "Hey there! What would you like me to do today?",
     "Hi!",
